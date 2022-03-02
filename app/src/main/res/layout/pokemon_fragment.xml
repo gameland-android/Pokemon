@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/grey">
+    <RelativeLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/types"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_margin="20dp"
+            android:gravity="center_horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:id="@+id/type_1"
+                android:orientation="vertical"
+                android:layout_marginRight="15dp"
+                android:gravity="center_horizontal">
+                <ImageView
+                    android:layout_width="60dp" android:layout_height="60dp"
+                    android:id="@+id/type_image_1"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/black" android:textSize="15sp" android:textStyle="bold"
+                    android:id="@+id/type_text_1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:id="@+id/type_2"
+                android:orientation="vertical"
+                android:layout_marginRight="15dp"
+                android:gravity="center_horizontal">
+                <ImageView
+                    android:layout_width="60dp" android:layout_height="60dp"
+                    android:id="@+id/type_image_2"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/black" android:textSize="15sp" android:textStyle="bold"
+                    android:id="@+id/type_text_2"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/images"
+            android:layout_below="@id/types"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true">
+            <ImageView
+                android:layout_width="100dp" android:layout_height="100dp"
+                android:id="@+id/front_default"/>
+            <ImageView
+                android:layout_width="100dp" android:layout_height="100dp"
+                android:id="@+id/front_shiny"/>
+            <ImageView
+                android:layout_width="100dp" android:layout_height="100dp"
+                android:id="@+id/front_female"/>
+            <ImageView
+                android:layout_width="100dp" android:layout_height="100dp"
+                android:id="@+id/front_shiny_female"/>
+            <ImageView
+                android:layout_width="100dp" android:layout_height="100dp"
+                android:id="@+id/back_default"/>
+            <ImageView
+                android:layout_width="100dp" android:layout_height="100dp"
+                android:id="@+id/back_shiny"/>
+            <ImageView
+                android:layout_width="100dp" android:layout_height="100dp"
+                android:id="@+id/back_female"/>
+            <ImageView
+                android:layout_width="100dp" android:layout_height="100dp"
+                android:id="@+id/back_shiny_female"/>
+        </GridLayout>
+
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/size"
+            android:backgroundTint="@color/orange"
+            android:layout_below="@id/images"
+            android:layout_margin="10dp"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="@dimen/elevation">
+
+            <RelativeLayout
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:id="@+id/height"
+                    android:textColor="@color/white" android:textSize="15sp" android:textStyle="bold"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="15dp" android:layout_marginBottom="15dp"/>
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:id="@+id/weight"
+                    android:textColor="@color/white" android:textSize="15sp" android:textStyle="bold"
+                    android:layout_below="@id/height"
+                    android:layout_marginBottom="15dp"/>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/stats"
+            android:backgroundTint="@color/orange"
+            android:layout_below="@id/size"
+            android:layout_marginTop="10dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="@dimen/elevation">
+
+            <TableLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_margin="25dp">
+                <TableRow
+                    android:layout_marginBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/hp"
+                        android:textColor="@color/white" android:textSize="15sp" android:textStyle="bold"
+                        android:layout_marginRight="10dp"/>
+                    <TextView
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/hp"
+                        android:textColor="@color/white" android:textSize="15sp" android:textStyle="bold"
+                        android:layout_marginRight="10dp"/>
+                    <TextView
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/speed"
+                        android:textColor="@color/white" android:textSize="15sp" android:textStyle="bold"
+                        android:layout_marginRight="10dp"/>
+                    <TextView
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/speed"
+                        android:textColor="@color/white" android:textSize="15sp" android:textStyle="bold"/>
+                </TableRow>
+                <TableRow
+                    android:layout_marginBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/attack"
+                        android:textColor="@color/white" android:textSize="15sp" android:textStyle="bold"
+                        android:layout_marginRight="10dp"/>
+                    <TextView
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/attack"
+                        android:textColor="@color/white" android:textSize="15sp" android:textStyle="bold"
+                        android:layout_marginRight="10dp"/>
+                    <TextView
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/special_attack"
+                        android:textColor="@color/white" android:textSize="15sp" android:textStyle="bold"
+                        android:layout_marginRight="10dp"/>
+                    <TextView
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/special_attack"
+                        android:textColor="@color/white" android:textSize="15sp" android:textStyle="bold"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="@string/defense"
+                        android:textColor="@color/white" android:textSize="15sp" android:textStyle="bold"
+                        android:layout_marginRight="10dp"/>
+                    <TextView
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/defense"
+                        android:textColor="@color/white" android:textSize="15sp" android:textStyle="bold"
+                        android:layout_marginRight="10dp"/>
+                    <TextView
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="@string/special_defense"
+                        android:textColor="@color/white" android:textSize="15sp" android:textStyle="bold"
+                        android:layout_marginRight="10dp"/>
+                    <TextView
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/special_defense"
+                        android:textColor="@color/white" android:textSize="15sp" android:textStyle="bold"/>
+                </TableRow>
+            </TableLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</ScrollView>
