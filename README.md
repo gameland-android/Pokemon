@@ -30,15 +30,15 @@ _The states in blue show the Pokemon list, the states in red an empty list, the 
 
 ### Libraries and technologies used
 ***
-Language: Kotlin
-MVI pattern: Uniflow library
-Asynchronous calls: coroutines
-Dependency injection: Koin
-Network: Retrofit
-JSON converter: Moshi
-Image loading: Glide
+Language: Kotlin  
+MVI pattern: Uniflow library  
+Asynchronous calls: coroutines  
+Dependency injection: Koin  
+Network: Retrofit  
+JSON converter: Moshi  
+Image loading: Glide  
 
 ### External resources
 ***
-APIs from [PokéApi](https://pokeapi.co/)
+APIs from [PokéApi](https://pokeapi.co/)  
 Pokemon type icons from [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Type)
