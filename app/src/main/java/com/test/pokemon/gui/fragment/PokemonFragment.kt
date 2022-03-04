@@ -41,10 +41,13 @@ class PokemonFragment: Fragment(R.layout.pokemon_fragment) {
             typeName = pokemonData.types[1].type.name
             binding.typeImage2.setImageResource(resources.getIdentifier(typeName,
                 "drawable", "com.test.pokemon"))
+            binding.typeImage2.visibility = View.VISIBLE
             binding.typeText2.text = typeName.uppercase(Locale.getDefault())
-            binding.type2.visibility = View.VISIBLE
-        } else
-            binding.type2.visibility = View.GONE
+            binding.typeText2.visibility = View.VISIBLE
+        } else {
+            binding.typeImage2.visibility = View.GONE
+            binding.typeText2.visibility = View.GONE
+        }
         // load height and weight
         binding.height.text = "Height: ${Converter.getFormattedHeight(pokemonData.height)}"
         binding.weight.text = "Weight: ${Converter.getFormattedWeight(pokemonData.weight)}"

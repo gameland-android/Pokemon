@@ -6,7 +6,7 @@
     card_view:cardCornerRadius="15dp"
     card_view:cardElevation="@dimen/elevation">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent" android:layout_height="wrap_content"
         android:background="@color/orange">
 
@@ -14,18 +14,21 @@
             android:layout_width="100dp" android:layout_height="100dp"
             android:id="@+id/thumb"
             android:contentDescription="@string/pokemon_thumbnail"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:layout_alignParentTop="true"/>
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"/>
 
         <TextView
             android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:id="@+id/pokemon_name"
             android:textColor="@color/white" android:textSize="15sp" android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="15dp"
-            android:layout_below="@id/thumb"/>
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@id/thumb"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="15dp"/>
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

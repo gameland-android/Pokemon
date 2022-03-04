@@ -8,12 +8,11 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.test.pokemon.MainDataFlow
 import com.test.pokemon.Pokemon
 import com.test.pokemon.R
 import com.test.pokemon.databinding.PokemonCardBinding
 
-class PokemonListAdapter(var pokemonList: List<Pokemon>, val dataFlow: MainDataFlow):
+class PokemonListAdapter(var pokemonList: List<Pokemon>, val onPokemonSelected: (pokemon: Pokemon, position: Int) -> Unit):
     RecyclerView.Adapter<PokemonListAdapter.ViewHolder>() {
 
     val imageUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
@@ -47,7 +46,7 @@ class PokemonListAdapter(var pokemonList: List<Pokemon>, val dataFlow: MainDataF
 
         override fun onClick(view: View?) {
             if (listenerEnabled)
-                dataFlow.showPokemonData(pokemonList[bindingAdapterPosition].id, bindingAdapterPosition)
+                onPokemonSelected(pokemonList[bindingAdapterPosition], bindingAdapterPosition)
         }
 
         override fun onTouch(view: View, motionEvent: MotionEvent): Boolean {
